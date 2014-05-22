@@ -1,0 +1,36 @@
+{
+    "name": "groundwork/groundwork-hacklang",
+    
+    "description": "A Hack framework for making RESTful JSON APIs",
+    
+    "version": "0.1.0",
+    
+    "type": "library",
+    
+    "keywords": ["api","restful","backbone.js","json", "hack", "hhvm"],
+    
+    "license": "MIT",
+    
+    "authors": [
+        {
+            "name": "Nathan Davison",
+            "homepage": "http://www.nathandavison.com",
+            "role": "Developer"
+        }
+    ],
+    
+    "support": {
+        "source": "https://github.com/ndavison/groundwork-hacklang"
+    },
+            
+    "autoload": {
+        "psr-4": {
+            "Resources\\": "app/Resources/",
+            "Library\\": "app/Library/",
+            "Models\\": "app/Models/",
+            "Tests\\": "app/Tests/",
+			"Config\\": "app/Config/",
+			"Groundwork\\": "framework/"
+        }
+    }
+}
