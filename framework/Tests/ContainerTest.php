@@ -70,5 +70,5 @@ class ContainerTest extends \PHPUnit_Framework_TestCase
 
 class TestContainable implements \Groundwork\Classes\IContainable
 {
-	public string $name = '';
+    public string $name = '';
 }

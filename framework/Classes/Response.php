@@ -45,17 +45,17 @@ class Response implements IContainable
      */
     public function send(int $code, mixed $body = ''): void
     {
-		// determine the code and body to return
-		if ($this->codes->contains($code)) {
-			if (!$body) {
-				$body = $this->codes->get($code);
-			}
-		} else {
-			$code = 500;
+        // determine the code and body to return
+        if ($this->codes->contains($code)) {
+            if (!$body) {
+                $body = $this->codes->get($code);
+            }
+        } else {
+            $code = 500;
             $body = 'API attempted to return an unknown HTTP status.';
-		}
-				
-		// respond
+        }
+                
+        // respond
         header('HTTP/1.1 ' . $code . ' ' . $this->codes->get($code));
         header('Content-type: application/json');
         echo json_encode($body);

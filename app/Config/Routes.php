@@ -20,19 +20,19 @@ use Groundwork\Classes\ServerException;
  */
 class Routes
 {
-	/**
-	 * Registers the application routes with the router.
+    /**
+     * Registers the application routes with the router.
 	 */
-	 public function registerRoutes(Router $router): void
-	 {
-		// the app home
-		$router->register('', function($ioc) {
-			$resource = $ioc->get('HomeResource');
-			if ($resource instanceof \Resources\HomeResource) {
-				$resource->output();
-			} else {
-				throw new ServerException('The resource was not a HomeResource instance.');
-			}
-		});
-	 }
+    public function registerRoutes(Router $router): void
+    {
+        // the app home
+        $router->register('', function($ioc) {
+            $resource = $ioc->get('HomeResource');
+            if ($resource instanceof \Resources\HomeResource) {
+                $resource->output();
+            } else {
+                throw new ServerException('The resource was not a HomeResource instance.');
+            }
+        });
+    }
 }

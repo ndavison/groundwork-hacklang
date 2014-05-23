@@ -35,22 +35,22 @@ class Container
      */
     public function get(string $alias): ?IContainable
     {
-		// does the alias exist?
+        // does the alias exist?
         if (!$this->registered->contains($alias)) {
-			return null;
-		}
+            return null;
+        }
         
         // does an instance already exist for this alias?
-		$instance = $this->instances->get($alias);
+        $instance = $this->instances->get($alias);
         if ($instance !== null) {
             return $instance;
-		}
+        }
         
         // execute the closure to get the first instance of this alias, and return it
-		$closure = $this->registered->get($alias);
-		if ($closure !== null) {
-			$this->instances->set($alias, $closure($this));
-		}
+        $closure = $this->registered->get($alias);
+        if ($closure !== null) {
+            $this->instances->set($alias, $closure($this));
+        }
         return $this->instances->get($alias);
     }
     
@@ -59,13 +59,13 @@ class Container
      */
     public function getNew(string $alias): ?IContainable
     {
-		// does the alias exist?
+        // does the alias exist?
         if (!$this->registered->contains($alias)) {
-			return null;
-		}
+            return null;
+        }
         
         // execute the closure and return its return   
-		$closure = $this->registered->get($alias);
-		return ($closure !== null) ? $closure($this) : null;
+        $closure = $this->registered->get($alias);
+        return ($closure !== null) ? $closure($this) : null;
     }
 }

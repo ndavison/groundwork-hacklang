@@ -47,13 +47,13 @@ class Request implements IContainable
     {       
         // establish the route property
         $this->route = str_replace($basedir, '', $_SERVER['REQUEST_URI']);
-		if (isset($_SERVER['QUERY_STRING'])) {
-			$this->route = str_replace('?' . $_SERVER['QUERY_STRING'], '', $this->route);
-		}
+        if (isset($_SERVER['QUERY_STRING'])) {
+            $this->route = str_replace('?' . $_SERVER['QUERY_STRING'], '', $this->route);
+        }
         $this->route = rtrim($this->route, '/');
         if ($this->route == '') {
-			$this->route = 'home';
-		}
+            $this->route = 'home';
+        }
         $this->route = ltrim($this->route, '/');
         
         // establish the httpMethod property
@@ -64,9 +64,9 @@ class Request implements IContainable
                 
         // establish the URI values property
         if (isset($_GET) && is_array($_GET)) {
-			foreach ($_GET as $key => $value) {
-				$this->uriValues->add(Pair {$key, $value});
-			}
+            foreach ($_GET as $key => $value) {
+                $this->uriValues->add(Pair {$key, $value});
+            }
         }
     }
         

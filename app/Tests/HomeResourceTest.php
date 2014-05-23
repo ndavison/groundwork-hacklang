@@ -14,7 +14,7 @@ class HomeResourceTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         require __DIR__ . '/../Config/Config.php';
-		$config = new \Config\Config();
+        $config = new \Config\Config();
         $this->apiBaseURL = 'http://localhost' . $config->baseurl;
         $this->curlHandle = curl_init();
         $this->curlOptions[CURLOPT_RETURNTRANSFER] = true;

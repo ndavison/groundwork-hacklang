@@ -20,21 +20,21 @@ use Groundwork\Classes\ServerException;
  */
 class IocBinds
 {
-	/**
-	 * Registers the IoC binds.
-	 */
-	public function registerBinds(Application $app): void {
-	
-		// the HomeResource class bind
-		$app->register('HomeResource', function($app) {
-			$request = $app->get('request');
-			$response = $app->get('response');
-			if ($request instanceof Request && $response instanceof Response) { 
-				$resource = new \Resources\HomeResource($request, $response);
-				return $resource;
-			} else {
-				throw new ServerException('Request and/or Response IoC binds were not valid.');
-			}
-		});
-	}
+    /**
+     * Registers the IoC binds.
+     */
+    public function registerBinds(Application $app): void {
+
+        // the HomeResource class bind
+        $app->register('HomeResource', function($app) {
+            $request = $app->get('request');
+            $response = $app->get('response');
+            if ($request instanceof Request && $response instanceof Response) { 
+                $resource = new \Resources\HomeResource($request, $response);
+                return $resource;
+            } else {
+                throw new ServerException('Request and/or Response IoC binds were not valid.');
+            }
+        });
+    }
 }

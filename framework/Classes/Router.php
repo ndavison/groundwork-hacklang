@@ -38,12 +38,12 @@ class Router implements IContainable
         // convert empty routes to 'home'
         if (!$route) {
             $route = 'home';
-		}
+        }
         
         // append the http method to the route
         if ($httpMethod) {
             $route = $httpMethod . ':' . $route;
-		}
+        }
                 
         $this->routes->add(Pair {$route, $callback});
     }
@@ -106,7 +106,7 @@ class Router implements IContainable
             
             // check for a regex match with the requested route. Store the 
             // matches in a variable so the Request instance can be informed.
-			$uriParams = array();
+            $uriParams = array();
             if (preg_match('%^' . (string) $routeRx . '$%',
                     $requestPrepend.$requestedRoute,
                     $uriParams)
@@ -115,8 +115,8 @@ class Router implements IContainable
                 // that were matched, and store the matched route.
                 foreach ($uriParams as $key => $value) {
                     if (!is_numeric($key)) {
-						$this->params->add(Pair {$key, $value});
-					}
+                        $this->params->add(Pair {$key, $value});
+                    }
                 }
                 $this->matched = $route;
                 
@@ -135,10 +135,10 @@ class Router implements IContainable
     public function getClosure(): (function (Application): void)
     {           
         $callback = $this->routes->get($this->matched);
-		if ($callback !== null && is_callable($callback)) {
-			return $callback;
-		} else {
-			throw new ServerException('The route callback was not callable.');
-		}
+        if ($callback !== null && is_callable($callback)) {
+            return $callback;
+        } else {
+            throw new ServerException('The route callback was not callable.');
+        }
     }
 }

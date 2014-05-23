@@ -12,9 +12,9 @@ namespace Config;
  */
 class Config
 {
-	/**
-	 * Define the base web directory with slashes e.g. if groundwork is 
-	 * accessible via http://localhost/gw/ then '/gw/' would be the value.
-	 */
-	public string $baseurl = '/groundwork/public/';
+    /**
+     * Define the base web directory with slashes e.g. if groundwork is 
+     * accessible via http://localhost/gw/ then '/gw/' would be the value.
+     */
+    public string $baseurl = '/groundwork/public/';
 }

@@ -27,7 +27,7 @@ class ResourceTest extends \PHPUnit_Framework_TestCase
         $request = new \Groundwork\Classes\Request('/api/', new \Groundwork\Classes\RequestBody());
         $response = new \Groundwork\Classes\Response();
         $resource = new Dummy($request, $response);
-		$resource->output();
+        $resource->output();
         
         $this->assertEquals($resource->result, $httpMethod);
     }
@@ -35,7 +35,7 @@ class ResourceTest extends \PHPUnit_Framework_TestCase
 
 class Dummy extends \Groundwork\Classes\HTTPResource
 {       
-	public string $result = '';
+    public string $result = '';
 
     protected function http_GET(): void
     {
