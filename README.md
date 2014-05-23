@@ -1,4 +1,6 @@
 # groundwork-hacklang - A micro-framework for RESTful JSON API development 
+![build](https://travis-ci.org/ndavison/groundwork-hacklang.svg?branch=master)
+
 written in (mostly) strict Hack.
 
 This is a rewrite of [groundwork](https://github.com/ndavison/groundwork), 
