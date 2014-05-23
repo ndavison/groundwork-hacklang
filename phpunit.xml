@@ -1,0 +1,10 @@
+<phpunit>
+<testsuites>
+  <testsuite name="Groundwork App Tests">
+    <directory>app/Tests</directory>
+  </testsuite>
+  <testsuite name="Groundwork Framework Tests">
+    <directory>framework/Tests</directory>
+  </testsuite>
+</testsuites>
+</phpunit>
