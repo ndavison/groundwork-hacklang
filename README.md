@@ -78,8 +78,8 @@ achieve a nicer directory on the web side.
 
 The file app/Config/Config.php contains the `baseurl` property which you will 
 need to change to reflect where groundwork exists relative to the web root - 
-e.g. if it is installed into http://foo.com/bar/, then '/bar/' would be your 
-value for this.
+e.g. if it is installed into http://localhost/bar/, then '/bar/' would be your 
+value for this. 
 
 ## Autoload
 
