@@ -95,11 +95,8 @@ A basic function test is provided inside app/Tests for the example home resource
 There are also unit tests available in framework/Tests. To run the tests, I've found this 
 command works (from the root groundwork dir):
 
-`hhvm $(which phpunit) app/Tests`
+`hhvm $(which phpunit)`
 
-Or
-
-`hhvm $(which phpunit) framework/Tests`
 
 ## License
 
