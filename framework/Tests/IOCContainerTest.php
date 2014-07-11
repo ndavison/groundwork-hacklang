@@ -4,13 +4,13 @@ namespace Groundwork\Tests;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-class ContainerTest extends \PHPUnit_Framework_TestCase
+class IOCContainerTest extends \PHPUnit_Framework_TestCase
 {
     protected $app;
     
     public function setUp()
     {
-        $this->app = new \Groundwork\Classes\Container();
+        $this->app = new \Groundwork\Classes\IOCContainer();
     }
         
     public function testIocRegistersAnAlias()

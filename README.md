@@ -83,11 +83,8 @@ need to change to reflect where groundwork exists relative to the web root -
 e.g. if it is installed into http://localhost/bar/, then '/bar/' would be your 
 value for this. 
 
-## Autoload
-
-Class autoloading is provided by the Composer autoload.php file, which is why a 
-`composer update` must be executed from the root of the groundwork directory before 
-groundwork will function correctly.
+Run `composer update` from the project root. Groundwork has no inbuilt requirments 
+as far as packages go, but does make use of the Composer class autoloading.
 
 ## Tests
 

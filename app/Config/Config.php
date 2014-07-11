@@ -14,7 +14,9 @@ class Config
 {
     /**
      * Define the base web directory with slashes e.g. if groundwork is 
-     * accessible via http://localhost/gw/ then '/gw/' would be the value.
+     * accessible under your web root as /gw/, then /gw/public/ would be 
+     * the correct value here. In situation like this, consider setting 
+     * up an alias (so <webroot>/gw/public is mapped to something nicer).
      */
-    public string $baseurl = '/groundwork/public/';
+    public string $baseurl = '/gw/public/';
 }

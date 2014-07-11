@@ -10,7 +10,7 @@ namespace Groundwork\Classes;
 /**
  * The Inversion of Control container.
  */
-class Container
+class IOCContainer
 {
     /**
      * Class instances that the container manages.
@@ -20,12 +20,12 @@ class Container
     /**
      * Alias to closure mappings for generating the instances.
      */
-    private Map<string, (function (Container): IContainable)> $registered = Map {};
+    private Map<string, (function (IOCContainer): IContainable)> $registered = Map {};
     
     /**
      * Registers an alias and closure mapping.
      */
-    public function register(string $alias, (function (Container): IContainable) $closure): void
+    public function register(string $alias, (function (IOCContainer): IContainable) $closure): void
     {       
         $this->registered->add(Pair {$alias, $closure});
     }

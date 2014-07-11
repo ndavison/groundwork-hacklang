@@ -14,7 +14,7 @@ use Config\Routes;
 /**
  * The main app scope.
  */
-class Application extends Container implements IContainable
+class Application extends IOCContainer implements IContainable
 {    
     /**
      * The app Config instance.
